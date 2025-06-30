@@ -77,3 +77,29 @@ cd ../cors-disabled
 pip install -r requirements.txt
 python main.py
 
+## 📁 Folder Structure
+
+cors-simulator/
+├── backend/
+│   ├── cors-enabled/
+│   │   ├── main.py               # Flask backend with CORS enabled
+│   │   └── requirements.txt
+│   └── cors-disabled/
+│       ├── main.py               # Flask backend with CORS disabled
+│       └── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── .env                      # Environment variables (API URLs)
+│   ├── vite.config.js
+│   ├── src/
+│   │   ├── App.jsx               # Main React component
+│   │   ├── App.css
+│   │   ├── main.jsx              # Entry point
+│   │   ├── components/
+│   │   │   ├── EditorBlock.jsx
+│   │   │   └── ResultDisplay.jsx
+│   │   └── utils/
+│   │       └── corsCheck.js     # Function to detect CORS usage in code
+├── README.md
+
