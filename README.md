@@ -49,7 +49,6 @@ These backends are hosted on Render and respond to `/data`.
 
 ## 📦 How to Run Locally
 
-### Clone the repo:
 ```bash
 git clone https://github.com/akashsundarr/cors-simulator.git
 cd cors-simulator
