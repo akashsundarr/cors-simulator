@@ -27,8 +27,12 @@ function App() {
   const handleRun = async () => {
     const corsEnabled = containsCORS(flaskCode);
     const url = corsEnabled
-      ? "https://bcf15ef2-18bd-49ab-aa71-a7175d491992-00-2ic7phniq4kqk.sisko.replit.dev/"
-      : "https://bc30e358-fd68-4beb-a0d9-81f7aeebb440-00-enhjkqtx2sxt.pike.replit.dev/";
+      ? import.meta.env.VITE_API_CORS_ENABLED
+      : import.meta.env.VITE_API_CORS_DISABLED
+
+       console.log("CORS API URL:", import.meta.env.VITE_API_CORS_ENABLED);
+       console.log("CORS API URL:", import.meta.env.VITE_API_CORS_DISABLED);
+
 
     try {
       const res = await fetch(url);
