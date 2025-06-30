@@ -53,3 +53,28 @@ These backends are hosted on Render and respond to `/data`.
 ```bash
 git clone https://github.com/akashsundarr/cors-simulator.git
 cd cors-simulator
+
+# 1. Clone the repo
+git clone https://github.com/akashsundarr/cors-simulator.git
+cd cors-simulator
+
+# 2. Set up the frontend
+cd frontend
+npm install
+
+# Create a .env file in the frontend folder with:
+# VITE_API_CORS_ENABLED=https://cors-simulator.onrender.com/data
+# VITE_API_CORS_DISABLED=https://cors-disabled.onrender.com/data
+
+npm run dev
+
+# 3. To run a backend locally (CORS enabled)
+cd ../backend/cors-enabled
+pip install -r requirements.txt
+python main.py
+
+# Or, to test without CORS
+cd ../cors-disabled
+pip install -r requirements.txt
+python main.py
+
